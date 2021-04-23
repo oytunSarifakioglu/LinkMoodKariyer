@@ -1,0 +1,22 @@
+CREATE TABLE `lecturer` (
+  `lecturer_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `FName` varchar(45) NOT NULL,
+  `Minit` varchar(45) DEFAULT NULL,
+  `LName` varchar(45) NOT NULL,
+  `user_name` varchar(45) NOT NULL,
+  `country` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `district` varchar(45) DEFAULT NULL,
+  `tel_no` bigint(20) NOT NULL,
+  `Bdate` varchar(45) NOT NULL,
+  `e_mail` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `sex` varchar(45) DEFAULT NULL,
+  `university` varchar(45) NOT NULL,
+  `department` varchar(45) NOT NULL,
+  `rank_lecturer` varchar(45) NOT NULL,
+  PRIMARY KEY (`lecturer_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `lecturer_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+)
